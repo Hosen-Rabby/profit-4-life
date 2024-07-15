@@ -1,1 +1,212 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  @apply normal-case;
+}
+body {
+  @apply bg-black text-white;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+/* Custom Utility Classes */
+.page-container {
+  @apply flex items-center justify-center min-h-screen;
+  min-height: calc(100vh - 4rem); /* Adjust for the navbar height */
+}
+
+.container {
+  @apply mx-auto px-4 md:px-0 z-20;
+}
+.nav-link {
+  @apply text-white px-3 py-2 rounded-md text-lg font-medium;
+}
+.nav-link:hover {
+  @apply text-gold;
+}
+
+.navbar {
+  @apply bg-transparent p-4 flex justify-between items-center;
+  height: 4rem; /* Navbar height */
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+  padding: 2.5rem;
+}
+
+.mobile-menu {
+  @apply visible md:invisible bg-transparent p-4 space-y-4;
+}
+
+.profit_box_h1 {
+  @apply mb-4 text-center text-6xl mb-2;
+  color: #e6bc43;
+}
+.profit_p,
+.profit_box_p {
+  @apply mb-4 font-montserrat font-medium text-xs  md:text-base;
+}
+.profit_box_h5 {
+  @apply text-center text-base md:text-2xl font-montserrat text-gold font-medium mb-5;
+}
+
+.profit_h4,
+.profit_box_h4 {
+  @apply mb-6 font-montserrat font-medium font-montserrat text-center text-lg md:text-lg text-gold;
+}
+.profit_h4 {
+  @apply font-bebas text-5xl;
+}
+.btn_unirme {
+  @apply mb-6 font-bebas font-medium text-center text-lg text-gold w-full mb-3 uppercase rounded-lg py-2 text-white;
+  background: rgb(164, 130, 19);
+  background: linear-gradient(
+    180deg,
+    rgba(164, 130, 19, 1) 44%,
+    rgba(251, 231, 162, 1) 100%
+  );
+  transition: all 0.5s ease-in-out;
+  box-shadow: 0px 3px 7px 0px rgba(230, 188, 67, 0.75);
+  -webkit-box-shadow: 0px 3px 7px 0px rgba(230, 188, 67, 0.75);
+  -moz-box-shadow: 0px 3px 7px 0px rgba(230, 188, 67, 0.75);
+  max-width: 300px;
+}
+.btn_group {
+  @apply w-[230px] md:w-[300px] block mt-4;
+}
+.btn_unirme:hover {
+  background: #000;
+}
+
+.btn_saber {
+  @apply mb-6 font-bebas font-medium text-center text-lg text-gold w-full mb-3 uppercase rounded-lg py-2 text-white border-2;
+  background: transparent;
+  transition: all 0.5s ease-in-out;
+  box-shadow: 0px 3px 7px 0px rgba(230, 188, 67, 0.75);
+  -webkit-box-shadow: 0px 3px 7px 0px rgba(230, 188, 67, 0.75);
+  -moz-box-shadow: 0px 3px 7px 0px rgba(230, 188, 67, 0.75);
+  border-color: #e6bc43;
+  max-width: 300px;
+}
+.btn_saber:hover {
+  background: rgb(164, 130, 19);
+  background: linear-gradient(
+    180deg,
+    rgba(164, 130, 19, 1) 44%,
+    rgba(251, 231, 162, 1) 100%
+  );
+}
+.nft_saber {
+  display: inline-block;
+  margin: 30px 0;
+  width: 300px;
+}
+.intensivo_box,
+.academia_online,
+.app_box,
+.profit_box {
+  @apply w-4/5 md:w-3/6 px-4 md:px-10 py-4 md:py-8 mx-auto;
+  border-radius: 20px;
+  box-shadow: 0px 3px 7px 0px rgba(22, 26, 66, 0.75);
+  -webkit-box-shadow: 0px 3px 7px 0px rgba(22, 26, 66, 0.75);
+  -moz-box-shadow: 0px 3px 7px 0px rgba(22, 26, 66, 0.75);
+  transition: all 0.5s ease-in-out;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.663);
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  opacity: 1;
+}
+.intensivo_box {
+  @apply w-full md:w-4/6 !important;
+}
+.app_box {
+  @apply w-4/5 md:w-3/6 px-10 py-6;
+}
+.app_box.comment_box {
+  @apply w-4/5 md:w-2/5 absolute px-2 md:px-8;
+}
+.app_box.comment_box.left_t {
+  @apply top-64 md:-top-20 left-2 md:left-20;
+}
+.app_box.comment_box.left_b {
+  @apply top-96 md:top-60 md:bottom-24 left-12 md:left-0;
+}
+.app_box.comment_box.right_b {
+  @apply bottom-8 md:bottom-12 right-16 md:right-0;
+}
+.box.profit_box {
+  @apply w-full my-4 px-4 md:px-20;
+}
+.box_over {
+  @apply w-full;
+}
+.box_over p {
+  @apply font-montserrat;
+}
+.box_over h6 {
+  background: rgb(164, 130, 19);
+  background: linear-gradient(
+    180deg,
+    rgba(164, 130, 19, 1) 44%,
+    rgba(251, 231, 162, 1) 100%
+  );
+  border-radius: 50px;
+  border: 1px solid #fff;
+}
+.intensivo_box:hover,
+.academia_online:hover,
+.app_box:hover,
+.profit_box:hover {
+  background: #404041a1;
+}
+.intensivo_box {
+  @apply w-4/6 my-10;
+}
+
+.numbers {
+  @apply border-t-2 border-b-2 py-5 bg-transparent my-10;
+  background-color: #3a393593;
+}
+
+.number_h1 {
+  @apply text-3xl md:text-6xl text-gold;
+}
+
+.inp_area {
+  @apply w-4/5 md:w-full mb-2 border-2 rounded-lg py-2 md:py-3 pl-2 text-white font-montserrat;
+  border-color: #e6bc43;
+  background-color: #847f6d;
+}
+textarea.inp_area {
+  @apply pb-32;
+}
+
+.inp_area::placeholder {
+  color: #fff;
+}
+
+/* elipse bg */
+
+#profitapp {
+  /* background-image: url("./assets/img/elipse/elipse.png"); */
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.abs_coin_y,
+.abs_coin {
+  @apply absolute z-0 pointer-events-none opacity-20 md:opacity-100;
+}
+
+.abs_coin_y {
+  @apply opacity-60 md:opacity-100;
+}
+
+/* button */

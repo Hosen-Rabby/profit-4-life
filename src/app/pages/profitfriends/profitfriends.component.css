@@ -1,0 +1,272 @@
+.rightss {
+  position: relative;
+  height: 550px;
+  width: 100%;
+}
+
+.slider-image1,
+.slider-image2,
+.slider-image3,
+.slider-image4,
+.slider-image5,
+.slider-image6 {
+  position: absolute;
+  height: 300px !important;
+}
+
+.rightss img {
+  height: 100%;
+}
+
+.slider-image1 {
+  width: 60%;
+  top: 140px;
+  left: 00px;
+  z-index: 6;
+}
+
+.slider-image2 {
+  width: 55%;
+  top: 120px;
+  left: 110px;
+  z-index: 5;
+}
+.slider-image3 {
+  width: 50%;
+  top: 100px;
+  left: 180px;
+  z-index: 4;
+}
+
+.slider-image4 {
+  width: 45%;
+  top: 70px;
+  left: 260px;
+  z-index: 3;
+}
+
+.slider-image5 {
+  width: 40%;
+  top: 40px;
+  left: 320px;
+  z-index: 2;
+}
+
+.slider-image6 {
+  width: 35%;
+  top: 0px;
+  left: 390px;
+  z-index: 1;
+}
+
+.slider_btns {
+  position: absolute;
+  bottom: 120px;
+  right: 170px;
+}
+.slider_btns button {
+  width: 35px;
+  height: 35px;
+  border: 1px solid gold;
+  border-radius: 50%;
+}
+.slider_btns button img {
+  width: 60%;
+  height: 7px;
+  margin-left: 7px;
+}
+
+#contact {
+  background-image: url("../../../assets/img/about/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#desbloques h1 {
+  text-shadow: 0px 1px 5px rgba(255, 255, 255, 1);
+}
+
+@media only screen and (max-width: 426px) {
+  .slider-image1,
+  .slider-image2,
+  .slider-image3,
+  .slider-image4,
+  .slider-image5,
+  .slider-image6 {
+    position: absolute;
+    height: 190px !important;
+  }
+  .slider-image1 {
+    width: 60%;
+    top: 150px;
+    left: 20px;
+    z-index: 6;
+  }
+
+  .slider-image2 {
+    width: 55%;
+    top: 130px;
+    left: 65px;
+    z-index: 5;
+  }
+  .slider-image3 {
+    width: 50%;
+    top: 100px;
+    left: 100px;
+    z-index: 4;
+  }
+
+  .slider-image4 {
+    width: 45%;
+    top: 70px;
+    left: 145px;
+    z-index: 3;
+  }
+
+  .slider-image5 {
+    width: 40%;
+    top: 40px;
+    left: 190px;
+    z-index: 2;
+  }
+
+  .slider-image6 {
+    width: 35%;
+    top: 0px;
+    left: 225px;
+    z-index: 1;
+  }
+}
+/* animated button */
+.animated-button {
+  position: relative;
+  display: inline-block;
+  padding: 15px 120px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: rgba(255, 217, 0, 0.342);
+  border: 2px solid white;
+  border-radius: 40px;
+  overflow: hidden;
+  cursor: pointer;
+  text-align: center;
+}
+
+.animated-button::before,
+.animated-button::after,
+.animated-button .image3 {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 0;
+  transition: background 0.3s;
+}
+
+.animated-button::before {
+  background-image: url("../../../assets/img/button/Mask\ group1.png");
+  animation: move-diagonal-1 1.4s linear infinite;
+  transform: rotate(300deg);
+  /* top: 20px; */
+  z-index: 0;
+}
+
+.animated-button::after {
+  background-image: url("../../../assets/img/button/Mask\ group1.png");
+  background-size: auto;
+  animation: move-diagonal-2 0.6s linear infinite 1.66s;
+  transform: rotate(-30deg);
+}
+
+.animated-button .image3 {
+  /* background-image: url("../../../assets/img/button/Mask\ group1.png"); */
+  animation: move-diagonal-3 5s linear infinite 3.33s;
+}
+
+.animated-button:hover::before {
+  animation: move-diagonal-hover-1 5s linear infinite;
+}
+
+.animated-button:hover::after {
+  /* background-image: url('image5.jpg'); */
+  animation: move-diagonal-hover-2 5s linear infinite 2.5s;
+}
+
+.animated-button:hover .image3 {
+  /* background-image: url('image6.jpg'); */
+  animation: move-diagonal-hover-3 5s linear infinite;
+}
+
+.animated-button span {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes move-diagonal-1 {
+  0% {
+    transform: translate(90%, -120%);
+  }
+  100% {
+    transform: translate(-120%, 120%);
+  }
+}
+
+@keyframes move-diagonal-2 {
+  0% {
+    left: 100px;
+    top: 0px;
+  }
+  100% {
+    bottom: -100px;
+  }
+}
+
+@keyframes move-diagonal-3 {
+  0% {
+    transform: translate(80%, -80%);
+  }
+  100% {
+    transform: translate(-80%, 80%);
+  }
+}
+
+@keyframes move-diagonal-hover-1 {
+  0% {
+    transform: translate(120%, -120%);
+  }
+  100% {
+    transform: translate(-120%, 120%);
+  }
+}
+
+@keyframes move-diagonal-hover-2 {
+  0% {
+    transform: translate(100%, -100%);
+  }
+  100% {
+    transform: translate(-100%, 100%);
+  }
+}
+
+@keyframes move-diagonal-hover-3 {
+  0% {
+    transform: translate(80%, -80%);
+  }
+  100% {
+    transform: translate(-80%, 80%);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

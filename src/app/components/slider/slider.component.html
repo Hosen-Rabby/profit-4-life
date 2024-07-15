@@ -1,0 +1,25 @@
+<div class="relative w-full max-w-xl mx-auto slider-container">
+  <div
+    *ngFor="let image of images; let i = index"
+    class="slider-item"
+    [ngStyle]="getStyle(i)"
+  >
+    <img
+      [src]="image"
+      alt="Image {{ i + 1 }}"
+      class="w-full h-full object-cover"
+    />
+  </div>
+  <button
+    (click)="prev()"
+    class="absolute div-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-white px-2 py-1"
+  >
+    Prev
+  </button>
+  <button
+    (click)="next()"
+    class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 text-white px-2 py-1"
+  >
+    Next
+  </button>
+</div>

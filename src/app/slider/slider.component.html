@@ -1,0 +1,13 @@
+<!-- src/app/slider/slider.component.html -->
+<div class="slider-container relative w-full h-64 overflow-hidden">
+    <div
+      *ngFor="let image of images; let i = index"
+      [ngStyle]="getStyle(i)"
+      class="absolute top-0 left-0 w-full h-full transition-transform duration-500 ease-in-out"
+    >
+      <img [src]="image" alt="Slider image" class="w-full h-full object-cover" />
+    </div>
+    <button (click)="prev()" class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white p-2">Prev</button>
+    <button (click)="next()" class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white p-2">Next</button>
+  </div>
+  

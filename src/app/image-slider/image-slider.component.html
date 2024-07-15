@@ -1,0 +1,10 @@
+<div class="slider-container">
+    <div class="slider-wrapper" [style.transform]="'translateX(' + currentIndex * -20 + '%)'">
+      <div *ngFor="let image of images; let i = index" class="slider-item" [style.zIndex]="images.length - i">
+        <img [src]="image" alt="Image {{ i + 1 }}">
+      </div>
+    </div>
+    <button class="nav-button left" (click)="prev()">‹</button>
+    <button class="nav-button right" (click)="next()">›</button>
+  </div>
+  

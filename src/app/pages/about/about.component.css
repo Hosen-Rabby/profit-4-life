@@ -1,0 +1,16 @@
+#contact {
+  @apply bg-cover bg-no-repeat;
+  background-image: url("../../../assets/img/about/background.png");
+}
+
+.video-thumbnails {
+  @apply border-2 border-transparent;
+}
+
+.video-thumbnails img {
+  @apply w-full h-auto;
+}
+
+.border {
+  @apply border-2 border-[rgb(216,171,81)];
+}

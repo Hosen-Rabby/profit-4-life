@@ -1,0 +1,26 @@
+.page-container {
+  background-size: cover;
+  background-position: center;
+}
+
+.all_counrty {
+  background-image: url("../../../assets/img/home/map.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.title {
+  @apply text-5xl md:text-7xl text-gold text-center mb-10;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.pointer-events-none {
+  pointer-events: none !important;
+}

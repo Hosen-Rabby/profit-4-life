@@ -1,0 +1,47 @@
+<nav
+  class="navbar top-0 left-0 w-full flex justify-between items-center p-4 bg-gray-800 text-white z-50"
+>
+  <a href="" class="flex items-center">
+    <img src="assets/img/logo.png" alt="Logo" class="h-18 w-14 mr-4" />
+  </a>
+  <div class="hidden md:flex space-x-4">
+    <a class="nav-link" routerLink="/">Home</a>
+    <a class="nav-link" routerLink="/profit4life">Servicos</a>
+    <a class="nav-link" routerLink="/">NFT</a>
+    <a class="nav-link z-50" routerLink="/about">About me</a>
+  </div>
+  <div>
+    <button class="bg-gold text-white px-4 py-1 rounded-md">Portal Web</button>
+  </div>
+  <div class="md:hidden">
+    <!-- Mobile menu button -->
+    <button class="text-white" (click)="toggleMenu()">
+      <img
+        *ngIf="!isMenuOpen"
+        src="../../../assets/img/burger menu open.png"
+        alt="Menu"
+        class="h-4 w-8"
+      />
+      <img
+        *ngIf="isMenuOpen"
+        src="../../../assets/img/burger menu close.png"
+        alt="Close"
+        class="h-8 w-6"
+      />
+    </button>
+  </div>
+</nav>
+<!-- Mobile Menu -->
+<div *ngIf="isMenuOpen" class="mobile-menu bg-gray-800 text-white p-4">
+  <a class="nav-link block py-2" routerLink="/" (click)="toggleMenu()">Home</a>
+
+  <a class="nav-link block py-2" routerLink="/" (click)="toggleMenu()"
+    >sevocpsnft</a
+  >
+  <a class="nav-link block py-2" routerLink="/" (click)="toggleMenu()"
+    >Crypto4Life</a
+  >
+  <a class="nav-link block py-2" routerLink="/about" (click)="toggleMenu()"
+    >About ME</a
+  >
+</div>
